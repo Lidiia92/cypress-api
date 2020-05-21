@@ -15,4 +15,20 @@ describe('REST API Test with Cypress', () => {
 
 		cy.get('@pokemon').its('status').should('equal', 200);
 	});
+
+	it('API Test - Validate Name Value', () => {
+		cy.request('https://pokeapi.co/api/v2/pokemon/25').as('pokemon');
+
+		cy.get('@pokemon').its('body').should('include', { name: 'pikachu' });
+	});
+
+	it('API Test - Validate Negative Status Code', () => {
+		cy.request({
+			method: 'GET',
+			url: 'https://pokeapi.co/api/v2/pokemon/1000',
+			failOnStatusCode: false,
+		}).as('pokemon');
+
+		cy.get('@pokemon').its('status').should('equal', 404);
+	});
 });
