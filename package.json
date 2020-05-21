@@ -1,0 +1,28 @@
+{
+  "name": "cypress-api",
+  "version": "1.0.0",
+  "description": "Rest Api Testing with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lidiia92/cypress-api.git"
+  },
+  "keywords": [
+    "Rest",
+    "Api",
+    "Cypress"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lidiia92/cypress-api/issues"
+  },
+  "homepage": "https://github.com/Lidiia92/cypress-api#readme",
+  "dependencies": {
+    "cypress": "^4.6.0",
+    "prettier": "^2.0.5"
+  }
+}
